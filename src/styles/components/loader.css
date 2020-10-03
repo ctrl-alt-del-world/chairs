@@ -1,0 +1,44 @@
+.loader {
+  opacity: 0.4;
+  &--bars {
+    height: 18px;
+    width: 66px;
+    border: 6px solid white;
+  }
+  &--inner {
+    &-one {
+      width: 54px;
+      border-right: 6px solid white;
+      border-left: 6px solid white;
+      height: 24px;
+    }
+    &-two {
+      width: 42px;
+      border-right: 6px solid white;
+      border-left: 6px solid white;
+      height: 6px;
+    }
+    &-three {
+      width: 30px;
+      border-right: 6px solid white;
+      border-left: 6px solid white;
+      height: 6px;
+    }
+    &-four {
+      width: 18px;
+      border-right: 6px solid white;
+      border-left: 6px solid white;
+      height: 3px;
+    }
+  }
+  &--row {
+    max-width: 30px;
+    left: 6px;
+    top: 0;
+    span {
+      background-color: red;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

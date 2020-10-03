@@ -1,0 +1,18 @@
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.www {
+  width: 1000vw;
+  opacity: 0.05;
+  animation: drift 180s linear infinite alternate;
+}
+.www__gradient {
+  height: 25vh;
+  transform: translateY(-100%);
+  background: linear-gradient(to bottom, rgba(4, 24, 147, 0), rgba(4, 24, 147, 1))
+}

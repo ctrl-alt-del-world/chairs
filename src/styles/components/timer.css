@@ -1,0 +1,126 @@
+.timer {
+  overflow: visible;
+  &__pie {
+  	fill:rgba(0,0,0,0);
+    stroke-width:31.8309886184;
+    stroke-dasharray: 0,0,0,100;
+    stroke-dashoffset: 25;
+    stroke: var(--yellow);
+  }
+  &__piechart {
+    width: 40vw;
+    height: 40vw;
+    transform: rotate(-90deg);
+    ellipse {
+      stroke-width: 0;
+    }
+
+    &_share {
+      display: none;
+    }
+
+  }
+  &__answer {
+    padding-top: 100px;
+    width: 100%;
+    h1 {
+      font-size: 5rem;
+
+    }
+    @media (min-width: $break-s) {
+      .timer__stats {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: $color-blue;
+        text-align: center;
+        transform: translate(-50%, -50%);
+      }
+      &_wrapper {
+        justify-content: center;
+      }
+      &_share {
+        display: none;
+      }
+    }
+  }
+
+  &__small {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    .timer__value {
+      font-size: 30px;
+    }
+    @media (--1000) {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  &__big {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    .timer__value {
+      font-size: 6rem;
+      margin-top: 10px;
+    }
+    .timer {
+      top: -18px;
+      @media (--800) {
+        top: -24px;
+      }
+    }
+    .timer__pie {
+      stroke-dasharray: 0,0,80,20;
+    }
+
+   
+    @media (--800) {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      width: 500px;
+      height: 500px;
+      .timer__value {
+        font-size: 10rem;
+      }
+    }
+    @media (--1200) {
+      width: 640px;
+      height: 640px;
+      .timer__value {
+        font-size: 18rem;
+      }
+    }
+  }
+  &.animate {
+    .timer__pie {
+      stroke-dasharray: 0,0,0,100;
+      -webkit-animation: timer 16s linear both;
+      animation: timer 16s linear both;
+      .timer__small & {
+        -webkit-animation: timer 16s linear both;
+        animation: timer 16s linear both;
+      }
+    }
+  }
+  &.paused {
+    .timer__pie {
+      animation-play-state: paused !important;
+    }
+  }
+}
+
+/* 1st pie is 40% */
+@-webkit-keyframes timer {
+  60%,100% {stroke-dasharray: 0,0,100,0;}
+}
+@keyframes timer {
+  60%,100% {stroke-dasharray: 0,0,100,0;}
+}

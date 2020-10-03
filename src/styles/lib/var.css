@@ -1,0 +1,45 @@
+@custom-media --400 (min-width: 25em);
+@custom-media --600 (min-width: 37.5em);
+@custom-media --800 (min-width: 50em);
+@custom-media --1000 (min-width: 62.5em);
+@custom-media --1200 (min-width: 75em);
+@custom-media --1400 (min-width: 87.5em);
+
+:root {
+  --200: 200ms;
+  --400: 400ms;
+  --600: 600ms;
+  --800: 800ms;
+  --1000: 1000ms;
+  --ease: ease-in-out;
+  --cubic: cubic-bezier(.12,.67,.53,1);
+  --cubic2: cubic-bezier(.12,.67,.53,1);
+
+  --black: #2D2824;
+  --white: #FFF;
+  --blue: #041893;
+
+  --yellow: rgba(255,240,41,1);
+
+}
+
+.c-white {
+  color: var(--white);
+}
+.c-blue {
+  color: var(--blue);
+}
+.c-black {
+  color: var(--black);
+}
+
+.bg-white {
+  background: var(--white);
+}
+.bg-blue {
+  background: var(--blue);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}

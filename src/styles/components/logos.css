@@ -1,0 +1,43 @@
+.logos {
+  padding: 15vh 0;
+  @media (--800) {
+    padding: 15vw 0;
+  }
+}
+.logos__title {
+  max-width: 620px;
+}
+.logos__grid {
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+.logos__logo {
+  padding: 4vw 1em;
+  width: 50%;
+  transition: opacity 600ms ease-in-out;
+  opacity: 0;
+  max-height: 100px;
+
+  &.is-loaded {
+    opacity: 0.4;
+  }
+
+  @media (--400) {
+    width: 33%;
+  }
+  @media (--600) {
+    width: 25%;
+  }
+  @media (--800) {
+    width: 20%;
+  }
+
+  img {
+    max-width: 150px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

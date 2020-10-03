@@ -1,0 +1,37 @@
+@import 'svbstrate/src/lib/reset.css';
+@import 'svbstrate/src/lib/display.css';
+@import 'svbstrate/src/lib/positioning.css';
+@import 'svbstrate/src/lib/flexbox.css';
+@import 'svbstrate/src/lib/align.css';
+@import 'svbstrate/src/lib/spacing.css';
+@import 'svbstrate/src/lib/z-index.css';
+
+@import './lib/var.css';
+@import './lib/typography.css';
+@import './lib/animations.css';
+@import './lib/button.css';
+
+@import './components/containers.css';
+@import './components/nav.css';
+@import './components/loader.css';
+@import './components/home.css';
+@import './components/timer.css';
+@import './components/quiz.css';
+@import './components/marquee.css';
+@import './components/footer.css';
+@import './components/www.css';
+
+html,
+body {
+  background: #FAF7F4;
+  color: black;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 1);
+  color: var(--blue);
+}
+
+#root {
+  overflow: hidden;
+}

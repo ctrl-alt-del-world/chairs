@@ -1,0 +1,48 @@
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  &__left {
+    top: 5vw;
+    widht: 200px;
+  }
+  h5 {
+    width: 200px;
+  }
+  &__text {
+    top: -6px;
+  }
+}
+.nav__logo {
+  img {
+    height: 45px;
+    width: 45px;
+  }
+}
+.nav__email {
+  top: -30px;
+  right: -45px;
+  height: 165px;
+  width: 165px;
+
+  @media (--600) {
+    top: calc(5vw - 82px + 23px);
+    right: -55px;
+  }
+
+  img {
+    &:first-child {
+      width: 40px;
+      height: 40px;
+    }
+    &:last-child {
+      animation: rotating 8s linear infinite;
+    }
+  }
+}

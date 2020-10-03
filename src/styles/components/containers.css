@@ -1,0 +1,14 @@
+.outer {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.c5 {
+  @media (--800) {
+    width: 50%;
+  }
+}
+
+.container {
+  max-width: 1640px;
+}

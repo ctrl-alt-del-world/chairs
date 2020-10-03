@@ -1,0 +1,15 @@
+.footer {
+  min-height: 100vh;
+
+  h2 {
+    max-width: 775px;
+  }
+
+  a {
+    transition: opacity 400ms var(--cubic);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

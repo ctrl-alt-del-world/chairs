@@ -1,0 +1,46 @@
+.marquee {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  min-height: 120px;
+  margin-top: 140px;
+  @media (--800) {
+    padding-top: 0.8rem;
+    padding-bottom: 0.6rem;
+    min-height: 240px;
+  }
+  &__inner {
+    position: absolute;
+    height: 100%;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 20s linear infinite;
+    span {
+      margin: 0 1rem;
+    }
+  }
+  &:hover {
+    background-color: var(--black);
+    color: var(--white);
+    a {
+      color: var(--white);
+    }
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes marqueeR {
+  from {transform: translateX(-50%);}
+  to {transform: translateX(0);}
+}
+
+@keyframes marquee {
+  from {transform: translateX(0);}
+  to {transform: translateX(-50%);}
+}

@@ -1,0 +1,41 @@
+[data-animate] {
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+[data-animate*="200"] {
+  transition-duration: 200ms;
+}
+[data-animate*="400"] {
+  transition-duration: 400ms;
+}
+
+[data-animate*="ease"] {
+  transition-timing-function: var(--cubic);
+}
+
+[data-animate*="delay"] {
+  transition-delay: 200ms;
+}
+
+[data-animate*='slide-up'] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-property: opacity, transform;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-animate*='scale-in'] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition-property: opacity, transform;
+
+  &.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

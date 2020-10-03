@@ -1,0 +1,35 @@
+.button {
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 0;
+  min-height: 36px;
+  padding: 0.4rem 1.4rem;
+  border: 1px solid black;
+  @media (--800) {
+    font-size: 18px;
+  }
+  &--black {
+    background-color: black;
+    color: white;
+
+    &:hover {
+      color: var(--yellow);
+      background-color: white;
+    }
+  }
+  &--yellow {
+    background-color: var(--yellow);
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+  }
+}
+
+.chair__buttons {
+  &-wrapper {
+    border-radius: 8px;
+    padding: 3px 5px;
+  }
+}

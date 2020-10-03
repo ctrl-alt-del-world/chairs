@@ -1,0 +1,369 @@
+.projects {
+  padding: 0 5vw 15vw;
+  list-style: none;
+
+  @media (--600) {
+    padding: 0 0 15vw;
+  }
+}
+.project {
+  padding: 0;
+  /* transform: 3s; */
+
+  &__para {
+    /* transition: transform 3s cubic-bezier(.06,.83,.1,1); */
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  .__deliverables {
+    line-height: 1.4 !important;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+  }
+
+
+  &[data-slug='restore'] {
+    @media (--600) {
+      width: 40%;
+      margin-bottom: 20vw;
+
+    }
+    @media (--800) {
+      /* width: 30%; */
+      margin-left: 5vw;
+    }
+  }
+
+  &[data-slug='ourplace'] {
+    @media (--600) {
+      width: 40%;
+      position: absolute;
+      right: 5vw;
+      top: 20vw;
+    }
+    @media (--800) {
+      top: 20vw;
+      width: 35%;
+    }
+  }
+
+  &[data-slug='ffora'] {
+    @media (--600) {
+      width: 40%;
+      margin-bottom: 20vw;
+      margin-left: 10vw;
+    }
+    @media (--800) {
+      /* width: 30%; */
+      margin-left: 8vw;
+    }
+  }
+
+  &[data-slug='glowbar'] {
+    @media (--600) {
+      width: 40%;
+      margin-bottom: 20vw;
+
+    }
+    @media (--800) {
+      /* width: 30%; */
+      margin-left: 5vw;
+    }
+  }
+
+  &[data-slug='prima'] {
+    @media (--600) {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      margin-top: -10vw;
+    }
+    @media (--800) {
+      /* top: 20vw; */
+      width: 44%;
+      margin-top: -14vw;
+    }
+    @media (--1000) {
+      width: 40%;
+      margin-top: -5vw;
+    }
+  }
+  &[data-slug='recess'] {
+    @media (--600) {
+      width: 40%;
+    }
+    @media (--1000) {
+      margin-left: 5vw;
+    }
+  }
+  &[data-slug='dims'] {
+    @media (--600) {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      margin-top: -15vw;
+    }
+    @media (--800) {
+      width: 30%;
+    }
+  }
+  &[data-slug='clare'] {
+    @media (--600) {
+      width: 40%;
+      margin-top: 20vw;
+      margin-left: 5vw;
+    }
+    @media (--800) {
+      margin-left: 10vw;
+    }
+  }
+  &[data-slug='blume'] {
+    @media (--600) {
+      width: 40%;
+      margin-top: 15vw;
+    }
+    @media (--1000) {
+      width: 35%;
+      margin-left: 5vw;
+    }
+  }
+  &[data-slug='wing'] {
+    @media (--600) {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      margin-top: -20vw;
+    }
+    @media (--800) {
+      right: 5vw;
+    }
+    @media (--1000) {
+      right: 10vw;
+      width: 30%;
+    }
+  }
+  &[data-slug='snowe'] {
+    @media (--600) {
+      width: 45%;
+      margin-top: 20vw;
+    }
+    @media (--1000) {
+      width: 40%;
+    }
+    @media (--1400) {
+      margin-right: 2vw;
+    }
+  }
+  &[data-slug='codecademy'] {
+    @media (--600) {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      margin-top: -20vw;
+    }
+    @media (--800) {
+      right: 5vw;
+    }
+    @media (--1000) {
+      width: 30%;
+    }
+  }
+  &[data-slug='parsley'] {
+    @media (--600) {
+      width: 45%;
+      margin-top: 20vw;
+      margin-left: 10vw;
+    }
+    @media (--800) {
+      margin-left: 7.5vw;
+    }
+    @media (--1000) {
+      margin-left: 15vw;
+    }
+  }
+  &[data-slug='recreo'] {
+    @media (--600) {
+      width: 30%;
+      margin-top: 15vw;
+    }
+    @media (--800) {
+      margin-left: 5vw;
+    }
+  }
+  &[data-slug='woolandoak'] {
+    @media (--600) {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      margin-top: -20vw;
+    }
+    @media (--800) {
+      right: 5vw;
+    }
+    @media (--1000) {
+      width: 40%;
+    }
+  }
+}
+.project__image {
+  overflow: hidden;
+  backface-visibility: hidden;
+  /* box-shadow: 7px 9px 18px 0 rgba(3, 19, 121, 0.6); */
+
+  video,
+  img {
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s var(--cubic), transform 2s var(--cubic2);
+  }
+
+  video[src] {
+    + {
+      img {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .__bg {
+    display: none;
+    opacity: 0;
+    background: #041893;
+    transition: opacity 400ms var(--cubic);
+  }
+
+  .__arrow {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    /* transition: transform 200ms var(--ease); */
+  }
+
+  .__deliverables {
+    display: none;
+    line-height: 1.2;
+    padding: 0 0 20px 20px;
+    opacity: 0;
+    transition: opacity 400ms var(--cubic);
+    transition-delay: 0.1s;
+    > span {
+      transition: all 200ms var(--cubic);
+      transform: translateY(5px);
+      display: block;
+      opacity: 0;
+      &:nth-child(1) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.1s;
+      }
+    }
+  }
+
+  &.is-loaded {
+    video,
+    img {
+      opacity: 1;
+    }
+  }
+
+  @media (--600) {
+    cursor: none;
+
+    a {
+      cursor: none;
+    }
+    .__deliverables,
+    .__bg {
+      display: block;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+      .__bg {
+        opacity: 0.8;
+      }
+      .__arrow {
+        opacity: 1;
+      }
+      .__deliverables {
+        opacity: 1;
+        > span {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.project__info {
+  padding: 5px 0 10vw;
+
+  @media (--600) {
+    padding: 5px 0 0 0;
+
+    .__deliverables {
+      display: none;
+    }
+  }
+
+  [data-slug='recess'] & {
+    @media (--600) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (--1000) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  [data-slug='restore'] & {
+    @media (--600) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (--1000) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  [data-slug='blume'] & {
+    @media (--600) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (--1000) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  [data-slug='snowe'] & {
+    @media (--600) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (--1400) {
+      padding-left: 0;
+    }
+  }
+  [data-slug='recreo'] & {
+    @media (--600) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (--1000) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

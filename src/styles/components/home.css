@@ -1,0 +1,50 @@
+.home__chair {
+  max-width: 900px;
+  margin-top: 8rem;
+  &-fact {
+    background-color: #FAF7F4;
+    border: 1px solid black;
+    padding: 1.2rem;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    @media (--800) {
+      width: 180px;
+      height: 180px;
+    }
+    &:first-child {
+      left: 10%;
+      top: -60px;
+      transform: rotate(-10deg);
+    }
+    &:nth-child(2) {
+      right: -20px;
+      top: 32%;
+      transform: rotate(14deg);
+    }
+    &.three {
+      left: auto;
+      right: 20px;
+      top: -60px;
+      transform: rotate(14deg);
+    }
+  }
+}
+
+.home {
+  &__arrow {
+    margin-top: 100px;
+    margin-left: 40px;
+  }
+  &__guessing {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    @media (--800) {
+      > div {
+        &:first-child {
+          padding-right: 3rem;
+        }
+      }
+    }
+  }
+}
