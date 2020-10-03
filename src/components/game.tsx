@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import cx from 'classnames'
 import { Strider, Step } from 'react-strider'

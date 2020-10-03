@@ -46,7 +46,7 @@ export const Question = ({ step, next, data, stop }) => {
         </div>
         <div className='f jcc aic bg-white'>
           <div className='p1'>
-            <img className='x' src={data.chair} />
+            <img className='x' alt='chair' src={data.chair} />
             <p>&nbsp;
               {answer !== null && (
                 <span>{data.answer}</span>

@@ -83,8 +83,8 @@
     "watch:css": "postcss src/styles/main.css -w -o src/index.css",
     "start": "npm-run-all -p watch:css start-js",
     "start-js": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "build:styles": "postcss src/styles/main.css -o src/styles.css",
+    "build": "npm-run-all build:css build:js",
+    "build:js": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
